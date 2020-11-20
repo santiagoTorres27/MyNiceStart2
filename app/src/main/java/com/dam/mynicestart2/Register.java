@@ -18,4 +18,9 @@ public class Register extends AppCompatActivity {
         Intent login = new Intent(this, LoginActivity.class);
         startActivity(login);
     }
+
+    public void mover (View view) {
+        Intent login = new Intent(this, MainActivity.class);
+        startActivity(login);
+    }
 }
