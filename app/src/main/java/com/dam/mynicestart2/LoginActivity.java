@@ -7,15 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
-
-import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -24,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     TextInputLayout password;
     MaterialButton btnCancel;
     MaterialButton btnLogin;
+    TextView txtRegistro;
 
 
     @Override
@@ -36,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         password = (TextInputLayout) findViewById(R.id.password);
         btnCancel = (MaterialButton) findViewById(R.id.btnCancel);
         btnLogin = (MaterialButton) findViewById(R.id.btnLogin);
+        txtRegistro = (TextView) findViewById(R.id.txtRegistro);
 
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.fade_in3);
 
@@ -44,10 +42,11 @@ public class LoginActivity extends AppCompatActivity {
         password.startAnimation(myanim);
         btnCancel.startAnimation(myanim);
         btnLogin.startAnimation(myanim);
+        txtRegistro.startAnimation(myanim);
     }
 
     public void register(View view) {
-        Intent next = new Intent(this, Register.class);
+        Intent next = new Intent(this, SigUnpActivity.class);
         startActivity(next);
     }
 

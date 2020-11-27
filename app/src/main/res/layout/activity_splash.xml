@@ -8,13 +8,17 @@
 
     <ImageView
         android:id="@+id/bg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/scrim"
+        android:visibility="visible"/>
 
     <ImageView
         android:id="@+id/logo"
@@ -30,11 +34,12 @@
         android:id="@+id/subtitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="See the universe"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Discover the universe"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:textColor="@color/white"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

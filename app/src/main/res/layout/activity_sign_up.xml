@@ -4,126 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".SigUnpActivity">
 
     <ImageView
         android:id="@+id/bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/fondo"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"/>
+        app:srcCompat="@drawable/bg2" />
 
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="SIGN UP"
-        android:textSize="40dp"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="40dp"
+        android:fontFamily="@font/open_sans"
+        android:letterSpacing=".2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="80dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username"
         android:layout_width="325dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@id/titulo"
-        android:layout_marginTop="80dp"
+        app:layout_constraintVertical_chainStyle="packed"
         app:startIconDrawable="@drawable/user">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white_trans"
-            android:hint="Username" />
+            android:hint="Username"
+            android:fontFamily="@font/open_sans" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="325dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@id/username"
-        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_chainStyle="packed"
         app:startIconDrawable="@drawable/email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white_trans"
-            android:hint="Email adress" />
+            android:hint="Email adress"
+            android:fontFamily="@font/open_sans"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
         android:layout_width="325dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@id/email"
         android:layout_marginTop="8dp"
         app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintVertical_chainStyle="packed"
         app:startIconDrawable="@drawable/lock">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white_trans"
-            android:hint="Password" />
+            android:hint="Password"
+            android:fontFamily="@font/open_sans"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password2"
         android:layout_width="325dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@id/password"
         android:layout_marginTop="8dp"
         app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintVertical_chainStyle="packed"
         app:startIconDrawable="@drawable/lock">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white_trans"
-            android:hint="Repeat password" />
+            android:hint="Repeat password"
+            android:fontFamily="@font/open_sans"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnOk"
+        android:id="@+id/btnCancel"
+        style="@style/ButtonOutlined"
         android:layout_width="160dp"
         android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:onClick="regresar"
         android:text="Cancel"
-        android:backgroundTint="@color/color_2"
+        android:fontFamily="@font/open_sans"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/password2"
         app:layout_constraintStart_toStartOf="@+id/password2"
-        android:onClick="regresar"/>
+        app:layout_constraintTop_toBottomOf="@id/password2" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCancel"
+        android:id="@+id/btnsignUp"
+        style="@style/ButtonStraight"
         android:layout_width="160dp"
         android:layout_height="64dp"
+        android:layout_marginTop="16dp"
         android:text="SIGN UP"
-        android:backgroundTint="@color/color_1"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/password2"
-        app:layout_constraintEnd_toEndOf="@id/password2"/>
-
+        android:fontFamily="@font/open_sans"
+        app:layout_constraintEnd_toEndOf="@id/password2"
+        app:layout_constraintTop_toBottomOf="@id/password2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

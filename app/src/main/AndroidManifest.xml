@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dam.mynicestart2">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,14 +15,18 @@
         </activity>
         <activity android:name=".SplashActivity"
             android:theme="@style/Theme.NoActionTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".Register"
-            android:theme="@style/Theme.NoActionTheme"/>
+        <activity android:name=".SigUnpActivity"
+            android:theme="@style/Theme.NoActionTheme">
+        </activity>
+
         <activity android:name=".LoginActivity"
             android:theme="@style/Theme.NoActionTheme"/>
         <activity android:name=".MainActivity" />
