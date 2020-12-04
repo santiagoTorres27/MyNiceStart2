@@ -14,6 +14,12 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
+/**
+ * Ventana de bienvenida con una animación y un scrim
+ * @author Santiago Torres
+ * @see LoginActivity
+ */
+
 public class SplashActivity extends AppCompatActivity {
 
     private TextView subtitulo;

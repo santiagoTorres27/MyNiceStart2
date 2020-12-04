@@ -13,6 +13,12 @@ import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 
+/**
+ * Ventana de Login con un usuario y contraseña y registro
+ * @author Santiago Torres
+ * @see SigUnpActivity
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
     ImageView logo;
