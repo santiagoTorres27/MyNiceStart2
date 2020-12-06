@@ -11,6 +11,12 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
+/**
+ * Ventana MainActivity2, hija de MainActivity.
+ * Consta de un ImageView con una imagen de ejemplo.
+ * @author Santiago Torres
+ */
+
 public class MainActivity2 extends AppCompatActivity {
 
     ImageView img;

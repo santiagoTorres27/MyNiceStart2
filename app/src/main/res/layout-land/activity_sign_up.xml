@@ -4,34 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".SigUnpActivity">
 
     <ImageView
         android:id="@+id/bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_logovector" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans"
+        android:letterSpacing=".2"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username"
-        android:layout_width="325dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
         app:layout_constraintVertical_chainStyle="packed"
         app:startIconDrawable="@drawable/user">
 
@@ -43,14 +47,29 @@
             android:hint="Username" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:startIconDrawable="@drawable/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white_trans"
+            android:fontFamily="@font/open_sans"
+            android:hint="Email adress" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
-        android:layout_width="325dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:endIconMode="password_toggle"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/username"
         app:layout_constraintVertical_chainStyle="packed"
@@ -64,56 +83,63 @@
             android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password2"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:startIconDrawable="@drawable/lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white_trans"
+            android:fontFamily="@font/open_sans"
+            android:hint="Repeat password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCancel"
         style="@style/ButtonOutlined"
         android:layout_width="160dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans"
+        android:onClick="regresar"
         android:text="Cancel"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@id/password" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
-        style="@style/ButtonStraight"
-        android:layout_width="160dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="16dp"
-        android:onClick="mover"
-        android:text="Login"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/password"
         app:layout_constraintTop_toBottomOf="@id/password" />
 
-    <TextView
-        android:id="@+id/txtRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnsignUp"
+        style="@style/ButtonStraight"
+        android:layout_width="160dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/open_sans"
-        android:onClick="register"
-        android:text="Have you got an account? Register"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCancel" />
+        android:text="SIGN UP"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/password2"
+        app:layout_constraintTop_toBottomOf="@id/password2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.10" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.90" />
+        app:layout_constraintGuide_percent="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
