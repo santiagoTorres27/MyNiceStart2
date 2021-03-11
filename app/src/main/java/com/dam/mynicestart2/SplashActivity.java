@@ -36,6 +36,7 @@ public class SplashActivity extends AppCompatActivity {
         // Implements and starts animation
 
         logo = (ImageView) findViewById(R.id.logo);
+
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         logo.startAnimation(myanim);
 
