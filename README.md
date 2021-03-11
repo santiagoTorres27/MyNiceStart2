@@ -20,11 +20,15 @@ Desarrollo de Interfaces
 ## Vista de los Activities en vista vertical
 Splash | Login | Sign Up
 ------ | ----- | ------
-![](img/splash.jpg) | ![](img/login.jpg) | ![](img/signup.jpg)
+![](img/splash.png) | ![](img/login.png) | ![](img/signup.png)
 
-MainActivity|MainActivity2
----|---|
-![](img/mainActivity.jpg)|![](img/mainActivity2.jpg)
+MainActivity| ContextMenu | SwipeRefreshLayout
+---|---|---|
+![](img/mainactivity1.png)|![](img/contextmenu.png)|![](img/swipe.png)
+
+ModalDialog| ExpandableCardView | MainActivity2
+---|---|---|
+![](img/modaldialog.png)|![](img/expandable.png)|![](img/mainactivity2.png)
 
 ## Vista de los Activities en vista horizontal
 Splash | Login
